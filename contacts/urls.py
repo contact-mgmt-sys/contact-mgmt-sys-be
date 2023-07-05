@@ -4,7 +4,7 @@ from contacts import views
 
 app_name = "contacts"
 urlpatterns = [
-    path("", views.contacts, name="list"),
-    path("<int:pk>/", views.contact, name="view")
+    path(f"{app_name}/", views.contacts, name="list"),
+    path(f"{app_name}/<int:pk>/", views.contact, name="view")
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)
