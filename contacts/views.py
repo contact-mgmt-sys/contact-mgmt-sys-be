@@ -5,12 +5,15 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.filters import SearchFilter
 from contacts.models import Contact
 from contacts.serializers import ContactSerializer
 
 class Contacts(ListCreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ["name", "address", "email", "mobile"]
 
 class Contact(RetrieveUpdateDestroyAPIView):
     queryset = Contact.objects.all()
