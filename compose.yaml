@@ -22,7 +22,7 @@ services:
       - contact-mgmt-sys
   
   server:
-    image: noamolatfs/contact-mgmt-sys-be
+    image: ${DOCKER_USER:+${DOCKER_USER}/}contact-mgmt-sys-be
     build:
       context: .
     ports:
