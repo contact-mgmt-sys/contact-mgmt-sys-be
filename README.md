@@ -32,11 +32,15 @@ DATABASE_PORT="5432"
 ```
 
 ## Usage
-* Starting the server.
+1. Migrate the databases.
+```
+python manage.py migrate
+```
+2. Start the server.
 ```
 python manage.py runserver
 ```
-* The API exposes the following endpoints.
+3. While running, the API exposes the following endpoints.
 
 | Method   | Endpoint                          | Description                                          |
 |----------|-----------------------------------|------------------------------------------------------|
