@@ -45,7 +45,7 @@ volumes:
 
 networks:
   contact-mgmt-sys:
-    external: true
+    name: contact-mgmt-sys
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
