@@ -24,11 +24,11 @@ pip install -r requirements.txt
 ```
 3. Create an `.env` file in the root directory and add the following environment variables. The following values are examples and should be changed to match your environment.
 ```env
-DATABASE_NAME="contact_mgmt_sys"
-DATABASE_USER="postgres"
-DATABASE_PASSWORD="postgres"
-DATABASE_HOST="127.0.0.1"
-DATABASE_PORT="5432"
+DATABASE_NAME=contact_mgmt_sys
+DATABASE_USER=postgres
+DATABASE_PASSWORD=postgres
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=5432
 ```
 
 ## Usage
@@ -52,11 +52,7 @@ python manage.py runserver
 | `DELETE` | `<host>/contacts/<id>/`           | Deletes the contact with matching id                 |
 
 ## Docker
-1. Create a network.
+1. Build the image and run the container.
 ```
-docker network create contact-mgmt-sys
-```
-2. Build the image and run the container.
-```
-docker compose up -d --build
+docker compose up --build
 ```
