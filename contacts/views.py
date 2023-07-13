@@ -13,7 +13,7 @@ class Contacts(ListCreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
     filter_backends = [SearchFilter]
-    search_fields = ["name", "address", "email", "mobile"]
+    search_fields = ["name"]
 
 class Contact(RetrieveUpdateDestroyAPIView):
     queryset = Contact.objects.all()
