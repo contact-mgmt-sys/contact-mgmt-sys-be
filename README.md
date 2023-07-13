@@ -52,11 +52,7 @@ python manage.py runserver
 ```
 docker network create contact-mgmt-sys
 ```
-2. Build the image.
+2. Build the image and run the container.
 ```
-docker build -t contact-mgmt-sys-fe .
-```
-3. Run the container.
-```
-docker run -p 8000:8000 contact-mgmt-sys-fe
+docker compose up -d --build
 ```
